@@ -1,11 +1,24 @@
 {
 	"variables": {
-		"client_id": "{{env `ARM_CLIENT_ID`}}",
-		"client_secret": "{{env `ARM_CLIENT_SECRET`}}",
-		"subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}"
+		"client_id": "dde6f518-a143-42ee-8073-7a91a87381f4",
+		"client_secret": "UY48Q~3P7K~csxx3N5cuXpV~zqgnpOQ5Pi2kabuK",
+		"subscription_id": "7de72e36-dc87-4e3f-aa67-6dacbc9993c6"
 	},
 	"builders": [{
-		**YOUR CODE HERE**
+		"type": "azure-arm",
+
+		"client_id": "dde6f518-a143-42ee-8073-7a91a87381f4",
+		"client_secret": "UY48Q~3P7K~csxx3N5cuXpV~zqgnpOQ5Pi2kabuK",
+		"subscription_id": "7de72e36-dc87-4e3f-aa67-6dacbc9993c6",
+		"os_type": "Linux",
+		"image_publisher": "Canonical",
+		"image_offer": "UbuntuServer",
+		"image_sku": "18.04-LST",
+
+		"managed_image_resource_group_name": "Azuredevops",
+		"managed_image_name": "firstPackerImage",
+		"location" : "westeurope",
+		"vm_size" : "Standard_B1s"
 	}],
 	"provisioners": [{
 		"inline": [
