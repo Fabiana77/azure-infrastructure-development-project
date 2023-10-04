@@ -8,7 +8,7 @@ For this project, you will write a Packer template and a Terraform template to d
 
 ```git clone <repository_url>```
 
-3. Create your infrastructure as code
+2. Create your infrastructure as code
 
 ### Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
@@ -19,7 +19,7 @@ For this project, you will write a Packer template and a Terraform template to d
 ### Instructions
 The following instructions will allow the user to build a scalable web server in Azure using the Azure CLI, a well as, Packer and Terraform. 
 
-1. Log into your Azure account
+**1. Log into your Azure account**
 
 Log into you Azure account using the following command:
 
@@ -27,7 +27,7 @@ Log into you Azure account using the following command:
 
 This will start a web instance where you can log into your account using your set browser and the user's credentials.
 
-2.  Create policy
+**2.  Create policy**
 
 Command to create a new policy in Azure CLI:
 
@@ -38,7 +38,7 @@ How to create a policy in the Azure Portal:
 - Click the "+ Add definition" button.
 - Define the policy by specifying its name, description, and conditions using Azure Policy Definition Language (JSON).
 
-3. Apply policy
+**3. Apply policy**
 
 To apply the policy using the Azure CLI, use the following command: 
 
@@ -52,23 +52,29 @@ Users can assign a policy in the Azure Portal following these steps:
 - Configure any parameters or exclusions as needed.
 - Review and confirm the assignment.
 
-4. Create a Resource Group
+**4. Create a Resource Group**
 
-´´´az group create --name <resource-group-name> --location <location> --subscription <subscription-id>´´´
+```az group create --name <resource-group-name> --location <location> --subscription <subscription-id>```
 
 Example: 
 
-´´´az group create --name Azuredevops --location South Central US´´´
+```az group create --name Azuredevops --location South Central US```
 
 
-5. Create a Packer image using the server.json file following this next command:
+**5. Create a Packer image using the server.json file following this next command:**
+   
 To create a packer image the user must provide their Azure credentials and save them into the server.json file. These credentials are the following:
 - Subscription ID (represented as Subscription ID)
 - Client ID (represented as Application ID)
 - Client Secret (represented as Secret Key)
 - location (the location that was set for the Azure Resource Group)
+
+Run the folloeing command to create a custom Packer image for the Virtual Machines:
+
 ```packer build server.json```  
 
+**6. Initiate Terraform using this command** 
+ 
 ### Output
 **Your words here**
 
