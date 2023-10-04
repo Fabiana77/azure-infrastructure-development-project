@@ -121,5 +121,11 @@ The following pictures represent the outputs of my personal code.
 
 ![Apply2](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/671c3982-5a66-4b70-af69-747dc11d66ba)
 
+![Captura de Pantalla 2023-10-04 a la(s) 16 32 57](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/73d8c5dd-5ccf-4d8c-9c01-13b60a69ca48)
+
+![Captura de Pantalla 2023-10-04 a la(s) 16 33 51](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/f453802f-8b47-478e-b53a-dce66b3c79a3)
+
+
+
 
 
