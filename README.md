@@ -94,6 +94,7 @@ In this project, I created the following variables:
 - *location:* location set for the deployment of your Azure Resource. 
 - *username:* username for your Virtual Machine. 
 - *password:* password for your Virtual Machine.
+- *resourcegn:* name of the resource group where all of the resources are created. 
 
 **8. Access your Resource Group by using an "import" command**
 
