@@ -22,7 +22,9 @@ The following instructions will allow the user to build a scalable web server in
 1. Log into your Azure account
 
 Log into you Azure account using the following command:
-''' az login ```
+
+```az login ```
+
 this will start a web instance where you can log into your account using your set browser and the user's credentials.
 
 2.  
