@@ -80,14 +80,22 @@ Run the folloeing command to create a custom Packer image for the Virtual Machin
 
 The variables.tf file is used to define input variables that can be used throughout your Terraform configuration. To add new variables to the file, the user must follow this next template:
 
-```variable "variable_name" {
+```
+variable "variable_name" {
   description = "Description of the variable."
   type        = string  # Replace with the appropriate data type (string, number, list, etc.)
   default     = "default_value"  # Optional, replace with a default value if needed
   # You can add other attributes or constraints as needed
-}```
+}
+```
 
+In this project, I created the following variables:
+- *countVM:* total number of Virtual Machines to create.
+- *location:* location set for the deployment of your Azure Resource. 
+- *username:* username for your Virtual Machine. 
+- *password:* password for your Virtual Machine.
 
+**8. **
 
 
 
