@@ -25,9 +25,22 @@ Log into you Azure account using the following command:
 
 ```az login ```
 
-this will start a web instance where you can log into your account using your set browser and the user's credentials.
+This will start a web instance where you can log into your account using your set browser and the user's credentials.
 
-2.  
+2.  Create policy
+
+To create a tagging policy to allow all resources that include tags, the user must run the follwing command, as well as the tagging-policy.json file:
+
+```az policy definition create --name tagging-policy --rules policy.json```
+
+A user can create a policy using the Azure Portal as wel doing these following steps:
+- Search "Policy" in tehAzure search bar (this bar shows all the resources Azzure supports)
+- Click on "Definition"
+- Create a policy definition, specifying conditions and constraints.
+- Assign the policy to a specific Azure scope.
+- Azure Policy monitors and enforces compliance, generating reports and allowing corrective actions.
+
+3.   
 
 ### Output
 **Your words here**
