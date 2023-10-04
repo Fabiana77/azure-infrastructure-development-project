@@ -17,7 +17,15 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-**Your words here**
+The following instructions will allow the user to build a scalable web server in Azure using the Azure CLI, a well as, Packer and Terraform. 
+
+1. Log into your Azure account
+
+Log into you Azure account using the following command:
+''' az login ```
+this will start a web instance where you can log into your account using your set browser and the user's credentials.
+
+2.  
 
 ### Output
 **Your words here**
