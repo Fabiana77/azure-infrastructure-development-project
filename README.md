@@ -74,6 +74,23 @@ Run the folloeing command to create a custom Packer image for the Virtual Machin
 ```packer build server.json```  
 
 **6. Initiate Terraform using this command** 
+```terraform init```
+
+**7. Customize Variables File (Optional)**
+
+The variables.tf file is used to define input variables that can be used throughout your Terraform configuration. To add new variables to the file, the user must follow this next template:
+
+```variable "variable_name" {
+  description = "Description of the variable."
+  type        = string  # Replace with the appropriate data type (string, number, list, etc.)
+  default     = "default_value"  # Optional, replace with a default value if needed
+  # You can add other attributes or constraints as needed
+}```
+
+
+
+
+
  
 ### Output
 **Your words here**
