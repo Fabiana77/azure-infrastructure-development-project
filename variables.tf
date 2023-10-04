@@ -3,7 +3,9 @@ variable "prefix" {
 }
 
 variable "location" {
+  type = string 
   description = "The Azure Region in which all resources in this example should be created."
+  default = "South Central US "
 }
 
 variable "countVM" {
@@ -19,4 +21,10 @@ variable "username" {
 variable "password" {
   description = "The password used for the Virtual Machine Resources"
   default = "TestPassword123"
+}
+
+variable "resource_gn" {
+  type = string
+  description = "The name of the resource group in which the resources are created"
+  default = "Azuredevops"
 }
