@@ -4,11 +4,9 @@
 For this project, you will write a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
 
 ### Getting Started
-1. Clone this repository
+1. Clone this [repository](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/tree/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files) 
 
 2. Create your infrastructure as code
-
-3. Update this README to reflect how someone would use your code.
 
 ### Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
