@@ -95,11 +95,27 @@ In this project, I created the following variables:
 - *username:* username for your Virtual Machine. 
 - *password:* password for your Virtual Machine.
 
-**8. **
+**8. Access your Resource Group by using an "import" command**
 
+```terraform import azurerm_resource_group.Azuredevops /subscriptions/<subscription_id>/resourceGroups/Azuredevops```
 
+- Add the subscription number to the command
 
- 
+**9. Create an Exsecusion Plan**
+Use the following command to create an execusion plan and save the results to be evaluated later 
+
+```terraform plan -out solution.plan```
+
+- Terraform will have the user entre the "prefix" and the "location" values. 
+
+**Apply the Execussion Plan**
+```terraform apply solution.plan```
+
+Once deploy, the users can undo all resources using ```terraform destroy``` in the Azure CLI.
+
 ### Output
-**Your words here**
+
+The following pictures represent the outputs of my personal code. 
+
+
 
