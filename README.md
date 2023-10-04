@@ -31,16 +31,28 @@ This will start a web instance where you can log into your account using your se
 
 To create a tagging policy to allow all resources that include tags, the user must run the follwing command, as well as the tagging-policy.json file:
 
-```az policy definition create --name tagging-policy --rules policy.json```
+```az policy definition create --name tagging-policy --rules tagging-policy.json```
 
 A user can create a policy using the Azure Portal as wel doing these following steps:
-- Search "Policy" in tehAzure search bar (this bar shows all the resources Azzure supports)
-- Click on "Definition"
-- Create a policy definition, specifying conditions and constraints.
-- Assign the policy to a specific Azure scope.
-- Azure Policy monitors and enforces compliance, generating reports and allowing corrective actions.
+- In the Azure Policy panel, select "Definitions" from the left-hand menu.
+- Click the "+ Add definition" button.
+- Define the policy by specifying its name, description, and conditions using Azure Policy Definition Language (JSON).
 
-3.   
+3. Apply policy
+
+To apply the policy using the Azure CLI, use the following command: 
+
+```az policy assignment create --name tagging-policy --policy tagging-policy```
+
+Users can assign a policy following these steps: 
+- Once you've created the policy definition, go to "Assignments" in the left-hand menu.
+- Click the "+ Assign policy" button.
+- Select the policy definition you created.
+- Choose the scope where you want to apply the policy (e.g., subscription, resource group, or resource).
+- Configure any parameters or exclusions as needed.
+- Review and confirm the assignment.
+  
+5.  
 
 ### Output
 **Your words here**
