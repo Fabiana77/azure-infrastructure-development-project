@@ -109,6 +109,7 @@ Use the following command to create an execusion plan and save the results to be
 - Terraform will have the user entre the "prefix" and the "location" values. 
 
 **Apply the Execussion Plan**
+
 ```terraform apply solution.plan```
 
 Once deploy, the users can undo all resources using ```terraform destroy``` in the Azure CLI.
@@ -116,6 +117,9 @@ Once deploy, the users can undo all resources using ```terraform destroy``` in t
 ### Output
 
 The following pictures represent the outputs of my personal code. 
+![Apply1](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/f903025d-9bf7-4a4a-816f-bbc68fbed889)
+
+![Apply2](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/671c3982-5a66-4b70-af69-747dc11d66ba)
 
 
 
