@@ -1,13 +1,11 @@
 {
-    "mode": "All",
-    "policyRule": {
-      "if": {
-        "field": "tags",
-        "exists": “false”
-      },
-      "then": {
-        "effect": "deny"
-      }
-    }
+  "if": {
+    "field": "tags",
+    "exists": "false"
+  },
+  "then": {
+    "effect": "deny"
   }
+}
+
   
