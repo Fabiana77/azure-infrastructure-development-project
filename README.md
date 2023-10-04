@@ -52,7 +52,7 @@ Users can assign a policy in the Azure Portal following these steps:
 - Configure any parameters or exclusions as needed.
 - Review and confirm the assignment.
 
-3. Create a Resource Group
+4. Create a Resource Group
 
 ´´´az group create --name <resource-group-name> --location <location> --subscription <subscription-id>´´´
 
