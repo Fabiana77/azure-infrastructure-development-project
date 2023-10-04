@@ -125,6 +125,9 @@ The following pictures represent the outputs of my personal code.
 
 ![Captura de Pantalla 2023-10-04 a la(s) 16 33 51](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/f453802f-8b47-478e-b53a-dce66b3c79a3)
 
+![Captura de Pantalla 2023-10-04 a la(s) 16 32 40](https://github.com/Fabiana77/azure-infrastructure-development-project/assets/70912175/4f8bacac-289a-42af-b5da-6fa88d83cedb)
+
+
 
 
 
