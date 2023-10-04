@@ -6,16 +6,16 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "Azuredevops" {
-  name     = "Azuredevops"
-  location = "South Central US"
+  name     = var.resource_gn
+  location = var.location
 }
 
 # Create the VNet and a subnet in it
 resource "azurerm_virtual_network" "main" {
     name                = "${var.prefix}-network"
     address_space       = ["10.0.0.0/22"]
-    location            = "South Central US"
-    resource_group_name = "Azuredevops"
+    location            = azurerm_resource_group.main.location
+    resource_group_name = azurerm_resource_group.main.name
 
     tags = {
         environment = "Testing"
@@ -24,7 +24,7 @@ resource "azurerm_virtual_network" "main" {
 
 resource "azurerm_subnet" "main" {
     name                 = "${var.prefix}-internal-subnet"
-    resource_group_name  = "Azuredevops"
+    resource_group_name  = azurerm_resource_group.main.name
     virtual_network_name = azurerm_virtual_network.main.name
     address_prefixes     = ["10.0.1.0/24"]
 }
@@ -34,8 +34,8 @@ resource "azurerm_subnet" "main" {
 
 resource "azurerm_network_security_group" "main" {
     name                = "${var.prefix}-nsg"
-    location            = "South Central US"
-    resource_group_name = "Azuredevops"
+    location            = azurerm_resource_group.main.location
+    resource_group_name = azurerm_resource_group.main.name
 
     security_rule {
         name                       = "Deny-Internet"
@@ -95,8 +95,8 @@ resource "azurerm_network_security_group" "main" {
 # Create a Public IP
 resource "azurerm_public_ip" "main" {
     name                = "${var.prefix}-public-ip"
-    resource_group_name = "Azuredevops"
-    location            = "South Central US"
+    resource_group_name = azurerm_resource_group.main.name
+    location            = azurerm_resource_group.main.location
     allocation_method   = "Dynamic"
 
     tags = {
@@ -107,8 +107,8 @@ resource "azurerm_public_ip" "main" {
 # Create a Load Balancer
 resource "azurerm_lb" "main" {
     name                = "${var.prefix}-lb"
-    location            = "South Central US"
-    resource_group_name = "Azuredevops"
+    location            = azurerm_resource_group.main.location
+    resource_group_name = azurerm_resource_group.main.name
 
     frontend_ip_configuration {
         name                 = "public-ip-address"
@@ -129,8 +129,8 @@ resource "azurerm_lb_backend_address_pool" "main" {
 resource "azurerm_network_interface" "main" {
     count               =  var.countVM
     name                = "${var.prefix}-nic-${count.index}"
-    resource_group_name = "Azuredevops"
-    location            = "South Central US"
+    resource_group_name = azurerm_resource_group.main.name
+    location            = azurerm_resource_group.main.location
 
     ip_configuration {
         name                          = "internal-ip-nic"
@@ -150,8 +150,8 @@ resource "azurerm_network_interface_backend_address_pool_association" "main" {
 # Availability Set
 resource "azurerm_availability_set" "main" {
     name                = "${var.prefix}-av-set"
-    location            = "South Central US"
-    resource_group_name = "Azuredevops"
+    location            = azurerm_resource_group.main.location
+    resource_group_name = azurerm_resource_group.main.name
 
     tags = {
         environment = "Testing"
@@ -162,15 +162,15 @@ resource "azurerm_availability_set" "main" {
 
 data "azurerm_image" "main" {
   name                = "myPackerImage2"
-  resource_group_name = "Azuredevops"
+  resource_group_name = azurerm_resource_group.main.name
 }
 
 # VMs and managed disk
 resource "azurerm_linux_virtual_machine" "main" {
     count                           = var.countVM
     name                            = "${var.prefix}-vm-${count.index}"
-    resource_group_name             = "Azuredevops"
-    location                        = "South Central US"
+    resource_group_name             = azurerm_resource_group.main.name
+    location                        = azurerm_resource_group.main.location
     size                            = "Standard_D2s_v3"
     admin_username                  = var.username
     admin_password                  = var.password
