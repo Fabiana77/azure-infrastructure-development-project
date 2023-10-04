@@ -1,24 +1,26 @@
 {
 	"variables": {
-		"client_id": "dde6f518-a143-42ee-8073-7a91a87381f4",
-		"client_secret": "UY48Q~3P7K~csxx3N5cuXpV~zqgnpOQ5Pi2kabuK",
-		"subscription_id": "7de72e36-dc87-4e3f-aa67-6dacbc9993c6"
+	  "client_id": "",
+	  "client_secret": "",
+	  "subscription_id": ""
 	},
 	"builders": [{
-		"type": "azure-arm",
-
-		"client_id": "dde6f518-a143-42ee-8073-7a91a87381f4",
-		"client_secret": "UY48Q~3P7K~csxx3N5cuXpV~zqgnpOQ5Pi2kabuK",
-		"subscription_id": "7de72e36-dc87-4e3f-aa67-6dacbc9993c6",
-		"os_type": "Linux",
-		"image_publisher": "Canonical",
-		"image_offer": "UbuntuServer",
-		"image_sku": "18.04-LST",
-
-		"managed_image_resource_group_name": "Azuredevops",
-		"managed_image_name": "firstPackerImage",
-		"location" : "westeurope",
-		"vm_size" : "Standard_B1s"
+	  "type": "azure-arm",
+	  
+	  "client_id": "9efb0481-7fbc-4216-98a3-f32d7f5765b2",
+	  "client_secret": "GPU8Q~Xg6vMwwtCuKSeSUbwKpiPi7Sh8qMbvUbg3",
+	  "subscription_id": "e2bf10f5-b611-44c7-9617-4a26610fc460",
+   
+	  "os_type": "Linux",
+	  "image_publisher": "Canonical",
+	  "image_offer": "UbuntuServer",
+	  "image_sku": "18.04-LTS",
+   
+	  "managed_image_resource_group_name": "Azuredevops",
+	  "managed_image_name": "myPackerImage2",
+   
+	  "location": "South Central US",
+	  "vm_size": "Standard_B1s"
 	}],
 	"provisioners": [{
 		"inline": [
@@ -28,4 +30,5 @@
 		"inline_shebang": "/bin/sh -x",
 		"type": "shell"
 	}]
-}
+  }
+
